@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 World Clock</h1>
+        <p class="subtitle">Current Time in Different Time Zones</p>
+        
+        <div class="controls">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search time zones..." 
+                class="search-box"
+            >
+            <button id="addTimezoneBtn" class="add-btn">+ Add Time Zone</button>
+        </div>
+
+        <div id="timezoneModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Time Zone</h2>
+                <select id="timezoneSelect" class="timezone-select">
+                    <option value="">Select a time zone...</option>
+                </select>
+                <button id="confirmAddBtn" class="confirm-btn">Add</button>
+            </div>
+        </div>
+
+        <div class="clocks-container" id="clocksContainer">
+            <!-- Clock cards will be dynamically added here -->
+        </div>
+
+        <div class="preset-timezones">
+            <h3>Quick Add:</h3>
+            <div class="preset-buttons">
+                <button class="preset-btn" data-tz="America/New_York">New York</button>
+                <button class="preset-btn" data-tz="Europe/London">London</button>
+                <button class="preset-btn" data-tz="Europe/Paris">Paris</button>
+                <button class="preset-btn" data-tz="Asia/Tokyo">Tokyo</button>
+                <button class="preset-btn" data-tz="Asia/Dubai">Dubai</button>
+                <button class="preset-btn" data-tz="Australia/Sydney">Sydney</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
